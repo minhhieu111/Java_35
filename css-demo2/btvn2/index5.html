@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        width: 300px;
+        height: 300px;
+        background-color: #56CCF2;
+        border-radius: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .parent > div{
+        width: 70%;
+        height: 70%;
+        background-color: #56CCF2;
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+    .parent div div{
+        height: 50%;
+        width: 50%;
+        border-radius: 100%;
+    }
+    .green_circle{
+        top: 10px;
+        left: 0px;
+        position: absolute;
+        background-color:#219653;
+    }
+    .orange_circle{
+        top: 10px;
+        right: 0px;
+        position: absolute;
+        background-color: #F2994A;
+    }
+    .red_circle{
+        position: absolute;
+        background-color: #EB5757;
+        bottom: 4px;
+    }
+</style>
+<body>
+    <div class="parent">
+        <div>
+            <div class="green_circle"></div>
+            <div class="red_circle"></div>
+            <div class="orange_circle"></div>
+        </div>
+    </div>
+</body>
+</html>
