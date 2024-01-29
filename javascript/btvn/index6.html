@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        border: 1px solid;
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .text_box{
+        width: 60%;
+    }
+    .submit_button{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <form id="signupForm" >
+            <h1>SignUp</h1>
+            <div>
+                <label for="Username">Username</label>
+                <input class="text_box" id="Username" type="text" >
+            </div>
+            <span id="usernameError" class="error"></span>
+            <div>
+                <label for="Password">Password</label>
+                <input class="text_box" id="Password" type="password" >
+            </div>
+            <span id="passwordError" class="error"></span>
+            <div>
+                <label for="Email">Email</label>
+                <input class="text_box" id="Email" type="email" >
+            </div>
+            <span id="emailError" class="error"></span>
+            <div>
+                <label for="Fullname">Fullname</label>
+                <input class="text_box" id="Fullname" type="text" >
+            </div>
+            <span id="fullnameError" class="error"></span>
+            <div class="submit_button">
+                <button onclick="submit()">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function submit() {
+       
+        const username = document.querySelector("#Username").value.trim();
+        if (username == "" || username.length < 5 || username.length > 10) {
+            document.querySelector("#usernameError").innerText = "Điền vào trường này và ký tự phải lớn hơn 5 và nhỏ hơn 10";
+            
+        }
+
+        
+        const password = document.querySelector("#Password").value.trim();
+        if (password == "" || password.length < 5 || password.length > 10) {
+            document.querySelector("#passwordError").innerText = "Điền vào trường này và ký tự phải lớn hơn 5 và nhỏ hơn 10";
+           
+        }
+
+        
+        const email = document.querySelector("#Email").value.trim();
+        if (email == "") {
+            document.querySelector("#emailError").innerText = "Điền vào trường này";
+            
+        }
+
+        
+        const fullname = document.querySelector("#Fullname").value.trim();
+        if (fullname == "" || fullname.length < 5 || fullname.length > 10) {
+            document.querySelector("#fullnameError").innerText = "Điền vào trường này và ký tự phải lớn hơn 5 và nhỏ hơn 10";
+            
+        }
+
+    }
+</script>
+</html>
