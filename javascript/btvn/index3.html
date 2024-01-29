@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let a =10;
+    let b = 20;
+
+    //hàm có tham số 
+    //tái sử dụng cao
+    function total(a,b){
+        return a+b; 
+    };
+
+    const c =total(10,20);
+
+    //hàm nặc danh, anonymous function
+    const total2 = function(a,b){
+        return a+b;
+    };
+    const total3 = total2;
+    total2(10,20);
+
+    //hàm mũi tên, arrow func tion
+    const total4 = (a,b)=>{
+        return a+b;
+    };
+
+    const total5 = new Function('a','b','return a+b')
+
+
+
+</script>
+</html>
