@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/19a8d2c646.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    html{
+        background-color: rgb(221, 219, 219);
+    }
+    .form_login{
+        height: 550px;
+        width: 300px;
+        background-color: white;
+        margin: 0 auto;
+        border-radius: 10px;
+        position: relative;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+    .header{
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header h2{
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    .cancel_button{
+        height: 30px;
+        width: 30px;
+        border: 2px rgb(216, 215, 215) solid;
+        border-radius: 999px;
+        background-color: white;
+        
+    }
+    .cancel_button i {
+        color: rgb(154, 152, 152);
+    }
+    .login{
+        margin-top: 20px;
+        
+    }
+    .login_with_google{
+        height: 40px;
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        border: 2px rgb(216, 215, 215) solid;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    .login_with_google i {
+        color: rgb(154, 152, 152);
+    }
+    .line{
+        margin: 20px 0 20px 0;
+        border-top: 1px rgb(216, 215, 215) solid;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form label{
+        font-family: 'Trebuchet MS', sans-serif;
+        margin-top: 10px;
+    }
+
+    form input{
+        margin-top: 10px;
+    }
+
+    input[type="text"]{
+        height: 30px;
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        border: 2px rgb(216, 215, 215) solid;
+        color: rgb(216, 215, 215);
+    }
+
+    input[type="password"]{
+        height: 30px;
+        width: 100%;
+        background-color: white;
+        border-radius: 5px;
+        border: 2px rgb(216, 215, 215) solid;
+    }
+    .checkbox{
+        align-self: flex-start;
+        color: rgb(156, 156, 156);
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    input[type="submit"]{
+        height: 35px;
+        width: 100%;
+        background-color: #0085FF;
+        color: white;
+        border-radius: 5px;
+        border: 2px rgb(216, 215, 215) solid;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    .forgot_password{
+        color: #0085FF;
+        text-decoration: none;
+        align-self: center;
+        margin-top: 10px;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    form p{
+        align-self: center;
+        color: rgb(149, 144, 144);
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    .sign_up{
+        color: #0085FF;
+        text-decoration: none;
+        align-self: center;
+        font-family: 'Trebuchet MS', sans-serif;
+        
+    }
+
+</style>
+<body>
+    <div class="form_login">
+        <div class="header">
+            <h2>Login</h2>
+            <button class="cancel_button"><a href=""><i class="fa-solid fa-xmark"></i></a></button>
+        </div>
+        <div class="login">
+            <div>
+                <button class="login_with_google"><i class="fa-brands fa-google"></i>  Login with google</button>
+                <div class="line"></div>
+            </div>
+            <form action="">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="" placeholder="abc@gmail.com">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+                <div class="checkbox">
+                    <input type="checkbox" >Remember me
+                </div>
+                <input type="submit" value="Login">
+                <a class="forgot_password" href="">Forgot Password?</a>
+                <div class="line"></div>
+                <p>Don't have an account?</p>
+                <a class="sign_up" href="">sign up</a>
+            </form>
+            
+        </div>
+        
+    </div>
+</body>
+</html>

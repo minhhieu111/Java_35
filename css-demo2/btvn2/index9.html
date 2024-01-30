@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/19a8d2c646.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik" rel="stylesheet">
+</head>
+<style>
+    html{
+        background-color: rgb(196, 196, 196);
+    }
+    .parent{
+        width: 800px;
+        height: 500px;
+        background-color: white;
+        border: 4px solid #8CC5F9;
+        border-radius: 20px;
+        position: relative;
+        margin: 0 auto;
+        padding: 30px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+    }
+    .X_btn{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #8CC5F9;
+        width: 3%;
+        height: 4%;
+    }
+    .picture{
+        height: 100%;
+        width: 40%;
+    }
+    .picture img{
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+    }
+    .content{
+        width: 55%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .content .rotMitt{
+        color:#8CC5F9;
+        font-style: italic;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .content p{
+        font-family: 'Rubik', sans-serif;
+    }
+    .link_icon{
+        display: flex;
+        height: 18%;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icon_background{
+        height: 46%;
+        width: 30%;
+        background-color: #8CC5F9;
+        border-radius: 999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icon_background a{
+        color: aliceblue;
+    }
+    .final_content{
+        color:#878ABC;
+        font-style: italic;
+    }
+</style>
+<body>
+    <div class="parent">
+        <a class="X_btn" href=""><i class="fa-solid fa-xmark"></i></a>
+        <div class="picture">
+            <img src="https://s3-alpha-sig.figma.com/img/6da2/7f2e/4b040796fe4a0915ef9149495e4ae40c?Expires=1707696000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VGWcHUtXByboAsvyRobt~qOXQ~XF8L9ZY33j2BswbPFZskoOM1jatNobqwEcOHNZaD7vorgw-4JLwVhbdT4cXfynXtU7FpwkluDiuKLiozCgcIJ8kZNcXuiFE7yCuZYCDhLvSxgq9KsF6YqhwfRb7LvoJLtU5R-hoBkkJC-B9yduhYhrPzwLgC21i5jWRiEz8pgMwpFDNy5Ayqp1EXwUmVM3d8me0kO4i2mNrnSp7x5t28bPZHepiyRjrwI6HuPo3ISSlTic2tU4awMac7TS3hNsW8R9mBNqlSWh4gxYmGCMcpJIrPc5yXaw365nmI~SQJk8e4Nz~6vCSUe-F6AK8g__" alt="">
+        </div>
+        <div class="content">
+            <p class="rotMitt">Rot Mitt</p>
+            <p>Consequuntur est accusantium et nemo. Similique quo atque ut eligendi aspernatur modi ut nemo dolorem.</br></br>
+                
+                Quod suscipit et sapiente et explicabo itaque molestiae laudantium architecto. </p>
+            <div class="link_icon">
+                <div class="icon_background">
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+                <div class="icon_background">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="icon_background">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                
+            </div>
+            <p class="final_content">“Consequuntur est accusantium et nemo. Similique quo atque ut eligendi”</p>
+        </div>
+    </div>
+</body>
+</html>
