@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+</body>
+<script>
+    let stringInput = "Xin 20 c{h}ào 60  #Cy30@!Tech(VN)  100";
+
+    let str = '';
+    let string = '';
+    for(let i= 0; i<stringInput.length; i++ ){
+        if(stringInput[i] != '@'&& stringInput[i] != '#' && stringInput[i] != '!'&& stringInput[i] !=  '{' && stringInput[i] !=  '}'&& stringInput[i] !=  '[' && stringInput[i] != ']' && stringInput[i] != '(' && stringInput[i] !=  ')'){
+            str += stringInput[i];
+        }
+    }
+    
+    let lastChar = ' ';
+    for(let i= 0; i<str.length; i++ ){
+        if( str[i] !=' '  || lastChar != ' '){
+            string += str[i];
+            if(i != str.length -2){
+                lastChar = str[i];
+            }else{
+                lastChar = ' ';
+            }
+        }
+    }
+
+    if(string[string.length-1] == " "){
+        string.replace(string[string.length-1],'');
+    }
+
+    console.log(string)
+
+//-------------------------------------5a-------------------------------------
+    function toArray(s){
+        let word = '';
+        let count = 0;
+        const arr =[];
+        let x = 0;
+            for(let i = s.length -1; i>=0; i--){
+                if(s[i] != ' '){
+                    count++;
+                }
+                if(s[i-1] == ' '||i == 0){
+                    
+                    for(let j = i;j<count + i; j++){
+                        word += s[j].toLowerCase();
+                    }
+                    word = word.replace(word[0],word[0].toUpperCase());
+                    arr[x]= word;
+                    x++;
+                    word = '';
+                    count = 0;
+                }
+            }
+        
+        return arr;
+    }
+
+//----------------------------cach 2-------------------------------------------------------
+    // function toArray(s){
+    //     let arr =[];
+    //     let chuoi = '';
+
+    //         for(let i = 0; i< s.length; i++){
+    //             if(s[i] != ' '){
+    //                 chuoi += s[i].toLowerCase();
+    //             }
+    //             chuoi = chuoi.replace(chuoi[0], chuoi[0].toUpperCase()) ;
+    //             if(s[i] == ' '|| i == s.length -1){
+    //                 arr.unshift(chuoi);
+    //                 chuoi = ''
+    //             }
+    //         }
+        
+    //     return arr;
+    // }
+    
+        let a = toArray(string);
+        alert(a)
+    
+//------------------------------------5b--------------------------------------
+
+    function sumNumber(n){
+        let temp = '';
+        let count = 0;
+        let num = 0;
+        let check = '1234567890';
+        
+        for(let i = 0;i<n.length;i++ ){
+            if(check.includes(n[i])){
+                temp += n[i];
+            }else{
+                if(temp != ''){
+                    num += parseInt(temp);
+                    count++;
+                    temp = '';
+                }  
+            }
+            
+        }
+        return num/count;
+    }
+
+    let avg = sumNumber(string);
+    alert(avg);
+
+
+    const node = document.querySelector("div")
+    node.innerHTML= "<p>" +stringProcess(stringInput)+"</p>";
+</script>
+</html>
