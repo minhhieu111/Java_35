@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    div{
+        background-color: red;
+        height: 100px;
+        width: 100px;
+        position: fixed;
+    }
+    .topLeft{
+        top: 5px;
+        left: 5px;
+    }
+    .topRight{
+        top: 5px;
+        right: 5px;
+    }
+    .bottomRight{
+        bottom: 5px;
+        right: 5px;
+    }
+    .bottomLeft{
+        bottom: 5px;
+        left: 5px;
+    }
+</style>
+<body>
+    <div></div>
+</body>
+<script>
+    
+    const nodeDiv = document.querySelector("div");
+    function run(){
+        setTimeout(()=>{
+            nodeDiv.classList.remove("topLeft");
+            nodeDiv.classList.add("topRight");
+            setTimeout(()=>{
+                nodeDiv.classList.remove("topRight");
+                nodeDiv.classList.add("bottomRight");
+                setTimeout(()=>{
+                    nodeDiv.classList.remove("bottomRight");
+                    nodeDiv.classList.add("bottomLeft");
+                    setTimeout(()=>{
+                        nodeDiv.classList.remove("bottomLeft")
+                        nodeDiv.classList.add("topLeft");
+                    },2000)
+                },2000)
+            },2000)
+        },2000)
+        
+    }
+    run()
+    
+setInterval(run,8000)    
+
+    
+   
+    
+</script>
+</html>
